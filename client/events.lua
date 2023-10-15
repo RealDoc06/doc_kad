@@ -1,10 +1,3 @@
-AddEventHandler("onResourceStart", function(resource)
-    -- spawn peds/npcs when the resource start
-    if resource == GetCurrentResourceName() then
-        peds = SpawnPeds()
-    end
-end)
-
 AddEventHandler("entityDamaged", function(victim, culprit, weapon, baseDamage)
     if IsScriptEntity(victim, peds) then
         local pedname = GetScriptEntity(victim, peds)
